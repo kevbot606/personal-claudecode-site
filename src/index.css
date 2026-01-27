@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-primary: #0A0A0A;
+  --text-primary: #ffffff;
+  --text-secondary: #ABABAB;
+  --border-color: #383838;
+  --font-heading: 'Schibsted Grotesk', system-ui, sans-serif;
+  --font-body: 'Geist', 'Schibsted Grotesk', system-ui, sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.6;
+  font-weight: 400;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  min-height: 100vh;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: -0.01em;
+}
+
+#root {
+  min-height: 100vh;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+a {
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}

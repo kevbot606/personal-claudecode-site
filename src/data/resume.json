@@ -1,0 +1,76 @@
+{
+  "name": "Kevin Coalwell",
+  "bio": "Versatile designer specializing in translating complex technical concepts into compelling visual experiences through strategic brand design and content creation, with proven experience engaging large-scale digital audiences. A unique blend of hands-on technical ability and attentive design sensibilities enable me to bridge the gap between engineering teams and broader markets.",
+  "contact": {
+    "email": "email@example.com",
+    "linkedin": "https://linkedin.com/in/yourprofile",
+    "github": "https://github.com/yourusername"
+  },
+  "experience": [
+    {
+      "title": "Brand Designer",
+      "company": "Agility Robotics",
+      "url": "https://www.agilityrobotics.com",
+      "duration": "October 2024 – Present",
+      "location": "Remote",
+      "highlights": [
+        "Managing internal coordination of comprehensive visual rebrand, serving as creative liaison between stakeholders and design contractors.",
+        "Led visual strategy for website redesign project, focusing on user experience optimization and brand consistency.",
+        "Developed comprehensive visual strategy for major trade show presence, designing booth graphics and collatoral that supported lead generation goals"
+      ]
+    },
+    {
+      "title": "Creative Producer",
+      "company": "Agility Robotics",
+      "url": "https://www.agilityrobotics.com",
+      "duration": "August 2022 - October 2024",
+      "location": "Remote",
+      "highlights": [
+        "Cultivated the company brand, voice, and storytelling strategy, built trust and generated millions of engagements across digital channels.",
+        "Interviewed SMEs to translate highly technical topics into engaging content across a variety of touch points.",
+        "Managed creative contractors and sourced freelance labor."
+      ]
+    },
+    {
+      "title": "Creative Content Manager",
+      "company": "Active911",
+      "url": "https://www.active911.com",
+      "duration": "March 2021 - June 2022",
+      "location": "Corvallis, OR",
+      "highlights": [
+        "Produced and published multimedia content across social channels to an audience of over 50,000.",
+        "Developed visual brand strategy for multimedia content in adherance to existing brand guidelines.",
+        "Interfaced with engineering teams to communicate software updates, new features, and tutorials to core audience."
+      ]
+    },
+    {
+      "title": "Video Producer",
+      "company": "Oregon State University",
+      "url": "https://communications.oregonstate.edu/osp",
+      "duration": "January 2019 - March 2021",
+      "location": "Corvallis, OR",
+      "highlights": [
+        "Coordinated with clients, drafted project proposals, conducted video shoots, and edited documentary and promotional content for Oregon State University in accordance with university brand guidelines."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Bachelor of Science in Computer Science",
+      "institution": "University Name",
+      "startDate": "2015",
+      "endDate": "2019"
+    }
+  ],
+  "skills": [
+    "JavaScript",
+    "TypeScript",
+    "React",
+    "Node.js",
+    "Python",
+    "SQL",
+    "Git",
+    "AWS",
+    "Docker"
+  ]
+}
