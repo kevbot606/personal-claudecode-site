@@ -1,6 +1,6 @@
 # Personal Portfolio Site
 
-A personal portfolio website built with React, developed using [Claude Code](https://github.com/anthropics/claude-code).
+A personal portfolio website built with React and Vite, developed using [Claude Code](https://github.com/anthropics/claude-code).
 
 ## About
 
@@ -9,15 +9,29 @@ This repository contains the source code for my personal portfolio site. The pro
 ## Tech Stack
 
 - **React** - Frontend framework
+- **Vite** - Build tool and dev server
 - **Claude Code** - AI-assisted development
 
 ## Getting Started
 
-Instructions for running the project locally will be added as the project develops.
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-## Development
+2. Start the development server:
+   ```bash
+   npm run dev
+   ```
 
-This project is actively being developed with Claude Code. Features and structure will evolve as the portfolio takes shape.
+3. Open [http://localhost:5173](http://localhost:5173) in your browser.
+
+## Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build
+- `npm run lint` - Run ESLint
 
 ## License
 
