@@ -40,7 +40,7 @@ function Resume() {
           <div className="job" key={index}>
             <div className="job-header">
               <span className="job-title">{edu.degree}</span>
-              <span className="job-date">{edu.startDate} - {edu.endDate}</span>
+              {/* <span className="job-date">{edu.startDate} - {edu.endDate}</span> */}
             </div>
             <div className="job-company">{edu.institution}</div>
           </div>

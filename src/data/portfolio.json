@@ -5,7 +5,7 @@
       "slug": "project-one",
       "title": "Project One",
       "description": "Brief description of the project and your role.",
-      "image": "/images/project1.jpg",
+      "image": "/images/isometric-layout.png",
       "tags": ["Design", "Branding"],
       "caseStudy": {
         "heroImage": "/images/project1-hero.jpg",
@@ -51,7 +51,7 @@
       "slug": "project-two",
       "title": "Project Two",
       "description": "Brief description of the project and your role.",
-      "image": "/images/project2.jpg",
+      "image": "/images/agility-robotics.png",
       "tags": ["Video", "Production"],
       "caseStudy": {
         "heroImage": "/images/project2-hero.jpg",
@@ -97,7 +97,7 @@
       "slug": "project-three",
       "title": "Project Three",
       "description": "Brief description of the project and your role.",
-      "image": "/images/project3.jpg",
+      "image": "/images/geometric-pattern.png",
       "tags": ["Content", "Strategy"],
       "caseStudy": {
         "heroImage": "/images/project3-hero.jpg",
@@ -135,52 +135,6 @@
           "Content performance metrics",
           "Engagement improvements",
           "Brand awareness growth"
-        ]
-      }
-    },
-    {
-      "id": 4,
-      "slug": "project-four",
-      "title": "Project Four",
-      "description": "Brief description of the project and your role.",
-      "image": "/images/project4.jpg",
-      "tags": ["Design", "Web"],
-      "caseStudy": {
-        "heroImage": "/images/project4-hero.jpg",
-        "overview": "A comprehensive overview of the project, explaining the context and scope of work.",
-        "role": "Web Designer",
-        "timeline": "6 weeks",
-        "team": "1 designer, 2 developers",
-        "objectives": [
-          "Redesign website to improve user experience",
-          "Increase conversion rates",
-          "Modernize visual design while maintaining brand consistency"
-        ],
-        "challenge": "Describe the main challenge or problem that needed to be solved.",
-        "approach": "Detail your strategic approach to solving the problem.",
-        "userExperience": {
-          "description": "Explain the user experience considerations.",
-          "insights": [
-            "User journey mapping results",
-            "Pain points identified",
-            "Opportunities for improvement"
-          ]
-        },
-        "solution": "Describe the final solution and how it addressed the objectives.",
-        "images": [
-          {
-            "src": "/images/project4-detail1.jpg",
-            "caption": "Website redesign"
-          },
-          {
-            "src": "/images/project4-detail2.jpg",
-            "caption": "Mobile responsive views"
-          }
-        ],
-        "results": [
-          "Conversion rate improvement",
-          "User engagement metrics",
-          "Performance improvements"
         ]
       }
     }

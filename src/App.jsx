@@ -14,10 +14,9 @@ function App() {
       <div className="portfolio">
         <nav className="navbar">
           <div className="navbar-content">
-            <NavLink to="/" className="logo">Logo</NavLink>
             <ul className="nav-links">
               <li><NavLink to="/">Resume</NavLink></li>
-              <li><NavLink to="/portfolio">Portfolio</NavLink></li>
+              <li><NavLink to="/portfolio">Case Studies</NavLink></li>
               <li><NavLink to="/about">About</NavLink></li>
             </ul>
           </div>
@@ -31,7 +30,6 @@ function App() {
             <ul>
               <li><a href={`mailto:${contact.email}`}>{contact.email}</a></li>
               <li><a href={contact.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-              <li><a href={contact.github} target="_blank" rel="noopener noreferrer">GitHub</a></li>
             </ul>
           </div>
         </aside>

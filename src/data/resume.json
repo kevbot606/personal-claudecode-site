@@ -2,9 +2,8 @@
   "name": "Kevin Coalwell",
   "bio": "Versatile designer specializing in translating complex technical concepts into compelling visual experiences through strategic brand design and content creation, with proven experience engaging large-scale digital audiences. A unique blend of hands-on technical ability and attentive design sensibilities enable me to bridge the gap between engineering teams and broader markets.",
   "contact": {
-    "email": "email@example.com",
-    "linkedin": "https://linkedin.com/in/yourprofile",
-    "github": "https://github.com/yourusername"
+    "email": "work@kevincoalwell.com",
+    "linkedin": "https://www.linkedin.com/in/kevin-coalwell/"
   },
   "experience": [
     {
@@ -56,10 +55,15 @@
   ],
   "education": [
     {
-      "degree": "Bachelor of Science in Computer Science",
-      "institution": "University Name",
-      "startDate": "2015",
-      "endDate": "2019"
+      "degree": "Bachelor of Fine Arts, Digital Communication Arts",
+      "institution": "Oregon State University",
+      "startDate": "2017",
+      "endDate": "2021"
+    }, 
+    {
+      "degree": "Programming Fundamentals",
+      "institution": "Oregon State University",
+      "issued": "2025"
     }
   ],
   "skills": [
@@ -72,5 +76,31 @@
     "Git",
     "AWS",
     "Docker"
+  ],
+  "clients and collaborators": [
+    "TIME",
+    "National Geographic",
+    "Oregon State University",
+    "Agility Robotics",
+    "Oregon State Productions",
+    "Mila Zuo",
+    "Orange Media Network",
+    "Daxbot",
+    "Active911",
+    "Carnegie Mellon University"
+  ],
+  "awards": [
+    {
+      "title": "Student Production Emmy Award, Nomination",
+      "year": "2020"
+    },
+    {
+      "title": "Official Selection, Sweet Home Film Festival",
+      "year": "2021"
+    },
+    {
+      "title": "Best Station Promo Video",
+      "year": "2021"
+    }
   ]
 }

@@ -9,15 +9,67 @@
   --text-primary: #ffffff;
   --text-secondary: #ABABAB;
   --border-color: #383838;
-  --font-heading: 'Schibsted Grotesk', system-ui, sans-serif;
-  --font-body: 'Geist', 'Schibsted Grotesk', system-ui, sans-serif;
+
+  /* Typography - Font Families */
+  --font-sans: 'IBM Plex Sans', system-ui, -apple-system, sans-serif;
+  --font-mono: 'IBM Plex Mono', 'Courier New', monospace;
+
+  /* Typography - Site Title */
+  --type-site-title-size: 22px;
+  --type-site-title-weight: 500;
+  --type-site-title-line-height: 1.2;
+  --type-site-title-letter-spacing: -0.02em;
+
+  /* Typography - Headlines */
+  --type-headline-large-size: 32px;
+  --type-headline-large-weight: 500;
+  --type-headline-large-line-height: 1.2;
+  --type-headline-large-letter-spacing: -0.02em;
+
+  --type-headline-medium-size: 17px;
+  --type-headline-medium-weight: 500;
+  --type-headline-medium-line-height: 1.3;
+  --type-headline-medium-letter-spacing: -0.02em;
+
+  --type-headline-small-size: 14px;
+  --type-headline-small-weight: 500;
+  --type-headline-small-line-height: 1.4;
+  --type-headline-small-letter-spacing: -0.01em;
+
+  /* Typography - Eyebrow (Mono) */
+  --type-eyebrow-size: 11px;
+  --type-eyebrow-weight: 600;
+  --type-eyebrow-line-height: 1.4;
+  --type-eyebrow-letter-spacing: 0.05em;
+
+  /* Typography - Body */
+  --type-body-large-size: 16px;
+  --type-body-large-weight: 400;
+  --type-body-large-line-height: 1.7;
+  --type-body-large-letter-spacing: -0.01em;
+
+  --type-body-medium-size: 15px;
+  --type-body-medium-weight: 400;
+  --type-body-medium-line-height: 1.7;
+  --type-body-medium-letter-spacing: -0.01em;
+
+  --type-body-small-size: 14px;
+  --type-body-small-weight: 400;
+  --type-body-small-line-height: 1.6;
+  --type-body-small-letter-spacing: -0.01em;
+
+  --type-body-xsmall-size: 13px;
+  --type-body-xsmall-weight: 400;
+  --type-body-xsmall-line-height: 1.5;
+  --type-body-xsmall-letter-spacing: 0;
 }
 
 body {
-  font-family: var(--font-body);
-  font-size: 15px;
-  line-height: 1.6;
-  font-weight: 400;
+  font-family: var(--font-sans);
+  font-size: var(--type-body-medium-size);
+  line-height: var(--type-body-medium-line-height);
+  font-weight: var(--type-body-medium-weight);
+  letter-spacing: var(--type-body-medium-letter-spacing);
   background-color: var(--bg-primary);
   color: var(--text-primary);
   min-height: 100vh;
@@ -25,7 +77,7 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  letter-spacing: -0.01em;
+  overflow-y: scroll;
 }
 
 #root {
@@ -41,4 +93,30 @@ a {
 
 a:hover {
   text-decoration: underline;
+}
+
+/* Scrollbar Styles */
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--border-color) var(--bg-primary);
+}
+
+/* Webkit browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--border-color);
+  border-radius: 4px;
+  border: 3px solid var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--text-secondary);
 }

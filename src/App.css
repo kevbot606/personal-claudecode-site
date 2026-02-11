@@ -15,14 +15,14 @@
 .navbar-content {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: right;
   width: 100%;
   max-width: 1440px;
   padding: 0 30px;
 }
 
 .logo {
-  font-family: var(--font-heading);
+  font-family: var(--font-sans);
   font-size: 16px;
   font-weight: 600;
   color: var(--text-primary);
@@ -42,8 +42,10 @@
 }
 
 .nav-links a {
-  font-size: 14px;
+  font-family: var(--font-sans);
+  font-size: var(--type-body-small-size);
   font-weight: 500;
+  letter-spacing: var(--type-body-small-letter-spacing);
   color: var(--text-secondary);
   text-decoration: none;
   transition: color 0.2s;
@@ -62,10 +64,14 @@
   display: flex;
   min-height: 100vh;
   padding-top: 60px;
+  width: 100%;
 }
 
 .sidebar {
   width: 25%;
+  min-width: 25%;
+  max-width: 25%;
+  flex-shrink: 0;
   padding: 50px 30px;
   border-right: 1px solid var(--border-color);
   position: sticky;
@@ -76,18 +82,22 @@
 }
 
 .sidebar h1 {
-  font-family: var(--font-heading);
-  font-size: 22px;
-  font-weight: 600;
+  font-family: var(--font-sans);
+  font-size: var(--type-site-title-size);
+  font-weight: var(--type-site-title-weight);
+  line-height: var(--type-site-title-line-height);
+  letter-spacing: var(--type-site-title-letter-spacing);
   margin-bottom: 24px;
-  letter-spacing: -0.02em;
 }
 
 .sidebar .bio {
-  font-size: 15px;
+  font-family: var(--font-sans);
+  font-size: var(--type-body-medium-size);
+  font-weight: var(--type-body-medium-weight);
+  line-height: var(--type-body-medium-line-height);
+  letter-spacing: var(--type-body-medium-letter-spacing);
   color: var(--text-secondary);
   margin-bottom: 30px;
-  line-height: 1.7;
 }
 
 .sidebar .contact {
@@ -95,11 +105,12 @@
 }
 
 .sidebar .contact h3 {
-  font-family: var(--font-heading);
-  font-size: 11px;
-  font-weight: 500;
+  font-family: var(--font-mono);
+  font-size: var(--type-eyebrow-size);
+  font-weight: var(--type-eyebrow-weight);
+  line-height: var(--type-eyebrow-line-height);
+  letter-spacing: var(--type-eyebrow-letter-spacing);
   text-transform: uppercase;
-  letter-spacing: 0.05em;
   color: var(--text-secondary);
   margin-bottom: 16px;
 }
@@ -110,7 +121,11 @@
 
 .sidebar .contact li {
   margin-bottom: 8px;
-  font-size: 14px;
+  font-family: var(--font-sans);
+  font-size: var(--type-body-small-size);
+  font-weight: var(--type-body-small-weight);
+  line-height: var(--type-body-small-line-height);
+  letter-spacing: var(--type-body-small-letter-spacing);
 }
 
 .sidebar .contact a {
@@ -124,8 +139,11 @@
 }
 
 .main-content {
-  width: 75%;
+  flex: 1;
+  min-width: 0;
+  max-width: 75%;
   padding: 50px 40px;
+  overflow-x: hidden;
 }
 
 .section {
@@ -133,11 +151,12 @@
 }
 
 .section h2 {
-  font-family: var(--font-heading);
-  font-size: 11px;
-  font-weight: 500;
+  font-family: var(--font-mono);
+  font-size: var(--type-eyebrow-size);
+  font-weight: var(--type-eyebrow-weight);
+  line-height: var(--type-eyebrow-line-height);
+  letter-spacing: var(--type-eyebrow-letter-spacing);
   text-transform: uppercase;
-  letter-spacing: 0.05em;
   color: var(--text-secondary);
   margin-bottom: 30px;
 }
@@ -154,19 +173,26 @@
 }
 
 .job-title {
-  font-family: var(--font-heading);
-  font-size: 17px;
-  font-weight: 600;
-  letter-spacing: -0.02em;
+  font-family: var(--font-sans);
+  font-size: var(--type-headline-medium-size);
+  font-weight: var(--type-headline-medium-weight);
+  line-height: var(--type-headline-medium-line-height);
+  letter-spacing: var(--type-headline-medium-letter-spacing);
 }
 
 .job-date {
+  font-family: var(--font-sans);
   font-size: 12px;
+  font-weight: 600;
   color: var(--text-secondary);
 }
 
 .job-company {
-  font-size: 15px;
+  font-family: var(--font-sans);
+  font-size: var(--type-body-medium-size);
+  font-weight: var(--type-body-medium-weight);
+  line-height: var(--type-body-medium-line-height);
+  letter-spacing: var(--type-body-medium-letter-spacing);
   color: var(--text-secondary);
   margin-bottom: 12px;
 }
@@ -186,9 +212,12 @@
 }
 
 .job-description {
-  font-size: 14px;
+  font-family: var(--font-sans);
+  font-size: var(--type-body-small-size);
+  font-weight: var(--type-body-small-weight);
+  line-height: var(--type-body-small-line-height);
+  letter-spacing: var(--type-body-small-letter-spacing);
   color: var(--text-secondary);
-  line-height: 1.7;
 }
 
 .job-description ul {
@@ -206,9 +235,12 @@
 }
 
 .about-content p {
-  font-size: 15px;
-  color: var(--text-secondary);
+  font-family: var(--font-sans);
+  font-size: var(--type-body-medium-size);
+  font-weight: var(--type-body-medium-weight);
   line-height: 1.8;
+  letter-spacing: var(--type-body-medium-letter-spacing);
+  color: var(--text-secondary);
   margin-bottom: 24px;
 }
 
@@ -220,13 +252,12 @@
 .portfolio-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
+  gap: 12px;
 }
 
 .project-card {
   background-color: transparent;
   border: 1px solid var(--border-color);
-  border-radius: 8px;
   overflow: hidden;
   transition: border-color 0.2s;
 }
@@ -252,17 +283,21 @@
 }
 
 .project-title {
-  font-family: var(--font-heading);
-  font-size: 17px;
-  font-weight: 600;
+  font-family: var(--font-sans);
+  font-size: var(--type-headline-medium-size);
+  font-weight: var(--type-headline-medium-weight);
+  line-height: var(--type-headline-medium-line-height);
+  letter-spacing: var(--type-headline-medium-letter-spacing);
   margin-bottom: 8px;
-  letter-spacing: -0.02em;
 }
 
 .project-description {
-  font-size: 14px;
+  font-family: var(--font-sans);
+  font-size: var(--type-body-small-size);
+  font-weight: var(--type-body-small-weight);
+  line-height: var(--type-body-small-line-height);
+  letter-spacing: var(--type-body-small-letter-spacing);
   color: var(--text-secondary);
-  line-height: 1.5;
   margin-bottom: 16px;
 }
 
@@ -273,11 +308,14 @@
 }
 
 .tag {
-  font-size: 11px;
+  font-family: var(--font-mono);
+  font-size: var(--type-eyebrow-size);
+  font-weight: var(--type-eyebrow-weight);
+  line-height: var(--type-eyebrow-line-height);
+  letter-spacing: var(--type-eyebrow-letter-spacing);
   padding: 4px 12px;
   background-color: transparent;
   border: 1px solid var(--border-color);
-  border-radius: 100px;
   color: var(--text-secondary);
 }
 
@@ -285,20 +323,22 @@
 .filter-bar {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 12px;
   margin-bottom: 30px;
 }
 
 .filter-tag {
-  font-size: 11px;
+  font-family: var(--font-mono);
+  font-size: var(--type-eyebrow-size);
+  font-weight: var(--type-eyebrow-weight);
+  line-height: var(--type-eyebrow-line-height);
+  letter-spacing: var(--type-eyebrow-letter-spacing);
   padding: 4px 12px;
   background-color: transparent;
   border: 1px solid var(--border-color);
-  border-radius: 100px;
   color: var(--text-secondary);
   cursor: pointer;
   transition: background-color 0.2s, color 0.2s, border-color 0.2s;
-  font-family: inherit;
 }
 
 .filter-tag:hover {
@@ -319,7 +359,11 @@
 
 .back-link {
   display: inline-block;
-  font-size: 13px;
+  font-family: var(--font-sans);
+  font-size: var(--type-body-xsmall-size);
+  font-weight: var(--type-body-xsmall-weight);
+  line-height: var(--type-body-xsmall-line-height);
+  letter-spacing: var(--type-body-xsmall-letter-spacing);
   color: var(--text-secondary);
   margin-bottom: 30px;
   transition: color 0.2s;
@@ -341,17 +385,21 @@
 }
 
 .case-study-title {
-  font-family: var(--font-heading);
-  font-size: 32px;
-  font-weight: 600;
-  letter-spacing: -0.02em;
+  font-family: var(--font-sans);
+  font-size: var(--type-headline-large-size);
+  font-weight: var(--type-headline-large-weight);
+  line-height: var(--type-headline-large-line-height);
+  letter-spacing: var(--type-headline-large-letter-spacing);
   margin-bottom: 20px;
 }
 
 .case-study-overview {
-  font-size: 16px;
+  font-family: var(--font-sans);
+  font-size: var(--type-body-large-size);
+  font-weight: var(--type-body-large-weight);
+  line-height: var(--type-body-large-line-height);
+  letter-spacing: var(--type-body-large-letter-spacing);
   color: var(--text-secondary);
-  line-height: 1.7;
 }
 
 .case-study-meta {
@@ -365,17 +413,22 @@
 }
 
 .meta-item h3 {
-  font-family: var(--font-heading);
-  font-size: 11px;
-  font-weight: 500;
+  font-family: var(--font-mono);
+  font-size: var(--type-eyebrow-size);
+  font-weight: var(--type-eyebrow-weight);
+  line-height: var(--type-eyebrow-line-height);
+  letter-spacing: var(--type-eyebrow-letter-spacing);
   text-transform: uppercase;
-  letter-spacing: 0.05em;
   color: var(--text-secondary);
   margin-bottom: 8px;
 }
 
 .meta-item p {
-  font-size: 15px;
+  font-family: var(--font-sans);
+  font-size: var(--type-body-medium-size);
+  font-weight: var(--type-body-medium-weight);
+  line-height: var(--type-body-medium-line-height);
+  letter-spacing: var(--type-body-medium-letter-spacing);
   color: var(--text-primary);
 }
 
@@ -397,19 +450,23 @@
 }
 
 .case-study-section h2 {
-  font-family: var(--font-heading);
-  font-size: 11px;
-  font-weight: 500;
+  font-family: var(--font-mono);
+  font-size: var(--type-eyebrow-size);
+  font-weight: var(--type-eyebrow-weight);
+  line-height: var(--type-eyebrow-line-height);
+  letter-spacing: var(--type-eyebrow-letter-spacing);
   text-transform: uppercase;
-  letter-spacing: 0.05em;
   color: var(--text-secondary);
   margin-bottom: 20px;
 }
 
 .case-study-section p {
-  font-size: 15px;
-  color: var(--text-secondary);
+  font-family: var(--font-sans);
+  font-size: var(--type-body-medium-size);
+  font-weight: var(--type-body-medium-weight);
   line-height: 1.8;
+  letter-spacing: var(--type-body-medium-letter-spacing);
+  color: var(--text-secondary);
 }
 
 .case-study-section ul {
@@ -417,9 +474,12 @@
 }
 
 .case-study-section li {
-  font-size: 15px;
-  color: var(--text-secondary);
+  font-family: var(--font-sans);
+  font-size: var(--type-body-medium-size);
+  font-weight: var(--type-body-medium-weight);
   line-height: 1.8;
+  letter-spacing: var(--type-body-medium-letter-spacing);
+  color: var(--text-secondary);
   margin-bottom: 8px;
 }
 
@@ -455,9 +515,11 @@
 }
 
 .insights h3 {
-  font-family: var(--font-heading);
-  font-size: 14px;
-  font-weight: 600;
+  font-family: var(--font-sans);
+  font-size: var(--type-headline-small-size);
+  font-weight: var(--type-headline-small-weight);
+  line-height: var(--type-headline-small-line-height);
+  letter-spacing: var(--type-headline-small-letter-spacing);
   margin-bottom: 16px;
 }
 
@@ -485,7 +547,11 @@
 }
 
 .case-study-figure figcaption {
-  font-size: 13px;
+  font-family: var(--font-sans);
+  font-size: var(--type-body-xsmall-size);
+  font-weight: var(--type-body-xsmall-weight);
+  line-height: var(--type-body-xsmall-line-height);
+  letter-spacing: var(--type-body-xsmall-letter-spacing);
   color: var(--text-secondary);
   margin-top: 12px;
   text-align: center;
@@ -500,12 +566,17 @@
 @media (max-width: 1024px) {
   .sidebar {
     width: 30%;
+    min-width: 30%;
+    max-width: 30%;
     padding: 40px 24px;
   }
 
   .main-content {
-    width: 70%;
+    flex: 1;
+    min-width: 0;
+    max-width: 70%;
     padding: 40px 30px;
+    overflow-x: hidden;
   }
 
   .job-header {
