@@ -1,0 +1,142 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "slug": "project-one",
+      "title": "Project One",
+      "description": "Brief description of the project and your role.",
+      "image": "/images/isometric-layout.png",
+      "tags": ["Design", "Branding"],
+      "caseStudy": {
+        "heroImage": "/images/project1-hero.jpg",
+        "overview": "A comprehensive overview of the project, explaining the context and scope of work.",
+        "role": "Brand Designer",
+        "timeline": "3 months",
+        "team": "2 designers, 1 project manager",
+        "objectives": [
+          "Establish a cohesive brand identity that resonates with target audience",
+          "Create scalable design system for future growth",
+          "Increase brand recognition and market presence"
+        ],
+        "challenge": "Describe the main challenge or problem that needed to be solved. What obstacles existed? What were the constraints?",
+        "approach": "Detail your strategic approach to solving the problem. What research did you conduct? What frameworks or methodologies did you use?",
+        "userExperience": {
+          "description": "Explain the user experience considerations and how you approached designing for the end user.",
+          "insights": [
+            "Key insight from user research",
+            "Another important finding",
+            "User behavior pattern discovered"
+          ]
+        },
+        "solution": "Describe the final solution and how it addressed the objectives. What was the creative direction? How did the design choices support the goals?",
+        "images": [
+          {
+            "src": "/images/project1-detail1.jpg",
+            "caption": "Brand identity system"
+          },
+          {
+            "src": "/images/project1-detail2.jpg",
+            "caption": "Application examples"
+          }
+        ],
+        "results": [
+          "Measurable outcome or achievement",
+          "Another key result",
+          "Impact on business goals"
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "slug": "project-two",
+      "title": "Project Two",
+      "description": "Brief description of the project and your role.",
+      "image": "/images/agility-robotics.png",
+      "tags": ["Video", "Production"],
+      "caseStudy": {
+        "heroImage": "/images/project2-hero.jpg",
+        "overview": "A comprehensive overview of the project, explaining the context and scope of work.",
+        "role": "Video Producer",
+        "timeline": "2 months",
+        "team": "1 producer, 2 videographers, 1 editor",
+        "objectives": [
+          "Create engaging video content that tells a compelling story",
+          "Showcase product features in an accessible way",
+          "Drive audience engagement across social platforms"
+        ],
+        "challenge": "Describe the main challenge or problem that needed to be solved.",
+        "approach": "Detail your strategic approach to solving the problem.",
+        "userExperience": {
+          "description": "Explain the user experience considerations.",
+          "insights": [
+            "Key insight from audience research",
+            "Content consumption patterns",
+            "Platform-specific requirements"
+          ]
+        },
+        "solution": "Describe the final solution and how it addressed the objectives.",
+        "images": [
+          {
+            "src": "/images/project2-detail1.jpg",
+            "caption": "Behind the scenes"
+          },
+          {
+            "src": "/images/project2-detail2.jpg",
+            "caption": "Final production stills"
+          }
+        ],
+        "results": [
+          "Video views and engagement metrics",
+          "Audience growth",
+          "Campaign success indicators"
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "slug": "project-three",
+      "title": "Project Three",
+      "description": "Brief description of the project and your role.",
+      "image": "/images/geometric-pattern.png",
+      "tags": ["Content", "Strategy"],
+      "caseStudy": {
+        "heroImage": "/images/project3-hero.jpg",
+        "overview": "A comprehensive overview of the project, explaining the context and scope of work.",
+        "role": "Content Strategist",
+        "timeline": "4 months",
+        "team": "1 strategist, 2 content creators",
+        "objectives": [
+          "Develop content strategy aligned with business goals",
+          "Increase organic reach and engagement",
+          "Establish thought leadership in the industry"
+        ],
+        "challenge": "Describe the main challenge or problem that needed to be solved.",
+        "approach": "Detail your strategic approach to solving the problem.",
+        "userExperience": {
+          "description": "Explain the user experience considerations.",
+          "insights": [
+            "Audience content preferences",
+            "Optimal content formats",
+            "Distribution channel analysis"
+          ]
+        },
+        "solution": "Describe the final solution and how it addressed the objectives.",
+        "images": [
+          {
+            "src": "/images/project3-detail1.jpg",
+            "caption": "Content examples"
+          },
+          {
+            "src": "/images/project3-detail2.jpg",
+            "caption": "Strategy documentation"
+          }
+        ],
+        "results": [
+          "Content performance metrics",
+          "Engagement improvements",
+          "Brand awareness growth"
+        ]
+      }
+    }
+  ]
+}
