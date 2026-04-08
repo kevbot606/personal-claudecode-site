@@ -244,6 +244,12 @@
   margin-bottom: 24px;
 }
 
+.about-content li {
+  color: var(--text-secondary);
+  list-style-type: none;
+
+}
+
 .about-content p:last-child {
   margin-bottom: 0;
 }
@@ -251,7 +257,7 @@
 /* Portfolio Grid */
 .portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   gap: 12px;
 }
 
@@ -260,14 +266,18 @@
   border: 1px solid var(--border-color);
   overflow: hidden;
   transition: border-color 0.2s;
+  display: flex;
+  flex-direction: row;
 }
 
 .project-card:hover {
   border-color: var(--text-secondary);
+  text-decoration: none;
 }
 
 .project-image {
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 4/3;
+  max-width: 20%;
   background-color: rgba(255, 255, 255, 0.05);
   overflow: hidden;
 }
@@ -784,4 +794,6 @@
   .case-study-section li {
     font-size: 14px;
   }
+
 }
+

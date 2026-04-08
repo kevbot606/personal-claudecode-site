@@ -78,17 +78,19 @@
     "Docker"
   ],
   "clients and collaborators": [
-    "TIME",
-    "National Geographic",
-    "Oregon State University",
-    "Agility Robotics",
-    "Oregon State Productions",
-    "Mila Zuo",
-    "Orange Media Network",
-    "Daxbot",
-    "Active911",
-    "Carnegie Mellon University"
-  ],
+  { "name": "TIME", "url": "https://time.com/collections/best-inventions-2024/7094773/agility-robotics-digit/" },
+  { "name": "National Geographic", "url": "nationalgeographic.com" },
+  { "name": "Territory Studio", "url": "https://territorystudio.com/" },
+  { "name": "Upstatement", "url": "https://upstatement.com/" },
+  { "name": "Oregon State University", "url": "https://films.oregonstate.edu/worry-wonder" },
+  { "name": "Agility Robotics", "url": "https://agilityrobotics.com" },
+  { "name": "Oregon State Productions", "url": "https://films.oregonstate.edu/worry-wonder" },
+  { "name": "Mila Zuo", "url": "https://www.imdb.com/title/tt13943838/" },
+  { "name": "Orange Media Network", "url": "https://orangemedianetwork.com/" },
+  { "name": "Daxbot", "url": "https://daxbot.com" },
+  { "name": "Active911", "url": "https://active911.com" },
+  { "name": "Carnegie Mellon University", "url": "https://www.cmu.edu/" }
+],
   "awards": [
     {
       "title": "Student Production Emmy Award, Nomination",
