@@ -1,9 +1,10 @@
 import { useState, useMemo } from 'react'
 import { Link } from 'react-router-dom'
-import portfolioData from '../data/portfolio.json'
+import { loadCaseStudies } from '../data/caseStudyLoader'
+
+const projects = loadCaseStudies()
 
 function Portfolio() {
-  const { projects } = portfolioData
   const [activeFilter, setActiveFilter] = useState('All')
 
   const allTags = useMemo(() => {
@@ -21,7 +22,7 @@ function Portfolio() {
 
   return (
     <section className="section">
-      <h2>Portfolio</h2>
+      <h2>Case Studies</h2>
       <div className="filter-bar">
         {allTags.map((tag) => (
           <button
@@ -35,7 +36,7 @@ function Portfolio() {
       </div>
       <div className="portfolio-grid">
         {filteredProjects.map((project) => (
-          <Link to={`/portfolio/${project.slug}`} className="project-card" key={project.id}>
+          <Link to={`/portfolio/${project.slug}`} className="project-card" key={project.slug}>
             <div className="project-image">
               <img src={project.image} alt={project.title} />
             </div>

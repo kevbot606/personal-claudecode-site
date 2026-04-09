@@ -1,0 +1,45 @@
+{
+  "title": "Robot Livery",
+  "description": "Brief description of the project and your role.",
+  "image": "geometric-pattern.png",
+  "tags": ["Content", "Strategy"],
+  "order": 3,
+  "caseStudy": {
+    "heroImage": "/images/project3-hero.jpg",
+    "overview": "A comprehensive overview of the project, explaining the context and scope of work.",
+    "role": "Content Strategist",
+    "timeline": "4 months",
+    "team": "1 strategist, 2 content creators",
+    "objectives": [
+      "Develop content strategy aligned with business goals",
+      "Increase organic reach and engagement",
+      "Establish thought leadership in the industry"
+    ],
+    "challenge": "Describe the main challenge or problem that needed to be solved.",
+    "approach": "Detail your strategic approach to solving the problem.",
+    "userExperience": {
+      "description": "Explain the user experience considerations.",
+      "insights": [
+        "Audience content preferences",
+        "Optimal content formats",
+        "Distribution channel analysis"
+      ]
+    },
+    "solution": "Describe the final solution and how it addressed the objectives.",
+    "images": [
+      {
+        "src": "/images/project3-detail1.jpg",
+        "caption": "Content examples"
+      },
+      {
+        "src": "/images/project3-detail2.jpg",
+        "caption": "Strategy documentation"
+      }
+    ],
+    "results": [
+      "Content performance metrics",
+      "Engagement improvements",
+      "Brand awareness growth"
+    ]
+  }
+}

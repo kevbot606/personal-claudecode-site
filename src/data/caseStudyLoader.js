@@ -1,0 +1,49 @@
+// Auto-discover all case study JSON files
+const caseStudyModules = import.meta.glob(
+  '../case-studies/*/case-study.json',
+  { eager: true }
+)
+
+// Auto-discover all images inside case study folders
+const imageModules = import.meta.glob(
+  '../case-studies/*/*.{png,jpg,jpeg,gif,webp,svg,avif}',
+  { eager: true, import: 'default' }
+)
+
+/**
+ * Resolves an image reference to its final URL.
+ * - If the value starts with "/" or "http", it's already a full path — use as-is.
+ * - Otherwise, treat it as a filename relative to the case study folder.
+ */
+function resolveImage(slug, filename) {
+  if (!filename) return filename
+  if (filename.startsWith('/') || filename.startsWith('http')) return filename
+  const key = `../case-studies/${slug}/${filename}`
+  return imageModules[key] || filename
+}
+
+function resolveImages(slug, data) {
+  return {
+    ...data,
+    image: resolveImage(slug, data.image),
+    caseStudy: {
+      ...data.caseStudy,
+      heroImage: resolveImage(slug, data.caseStudy.heroImage),
+      images: data.caseStudy.images?.map(img => ({
+        ...img,
+        src: resolveImage(slug, img.src)
+      }))
+    }
+  }
+}
+
+export function loadCaseStudies() {
+  return Object.entries(caseStudyModules)
+    .map(([path, module]) => {
+      // path looks like "../case-studies/project-one/case-study.json"
+      const slug = path.split('/').at(-2)
+      const data = module.default || module
+      return { slug, ...resolveImages(slug, data) }
+    })
+    .sort((a, b) => (a.order ?? 999) - (b.order ?? 999))
+}

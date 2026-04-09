@@ -1,0 +1,45 @@
+{
+  "title": "Tradeshow Booth",
+  "description": "Brand + experience design",
+  "image": "isometric-layout.png",
+  "tags": ["Design", "Branding"],
+  "order": 1,
+  "caseStudy": {
+    "heroImage": "/images/project1-hero.jpg",
+    "overview": "A comprehensive overview of the project, explaining the context and scope of work.",
+    "role": "Brand Designer",
+    "timeline": "3 months",
+    "team": "2 designers, 1 project manager",
+    "objectives": [
+      "Establish a cohesive brand identity that resonates with target audience",
+      "Create scalable design system for future growth",
+      "Increase brand recognition and market presence"
+    ],
+    "challenge": "Describe the main challenge or problem that needed to be solved. What obstacles existed? What were the constraints?",
+    "approach": "Detail your strategic approach to solving the problem. What research did you conduct? What frameworks or methodologies did you use?",
+    "userExperience": {
+      "description": "Explain the user experience considerations and how you approached designing for the end user.",
+      "insights": [
+        "Key insight from user research",
+        "Another important finding",
+        "User behavior pattern discovered"
+      ]
+    },
+    "solution": "Describe the final solution and how it addressed the objectives. What was the creative direction? How did the design choices support the goals?",
+    "images": [
+      {
+        "src": "/images/project1-detail1.jpg",
+        "caption": "Brand identity system"
+      },
+      {
+        "src": "/images/project1-detail2.jpg",
+        "caption": "Application examples"
+      }
+    ],
+    "results": [
+      "Measurable outcome or achievement",
+      "Another key result",
+      "Impact on business goals"
+    ]
+  }
+}

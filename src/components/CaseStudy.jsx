@@ -1,9 +1,11 @@
 import { useParams, Link } from 'react-router-dom'
-import portfolioData from '../data/portfolio.json'
+import { loadCaseStudies } from '../data/caseStudyLoader'
+
+const projects = loadCaseStudies()
 
 function CaseStudy() {
   const { slug } = useParams()
-  const project = portfolioData.projects.find(p => p.slug === slug)
+  const project = projects.find(p => p.slug === slug)
 
   if (!project) {
     return (
