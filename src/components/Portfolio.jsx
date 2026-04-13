@@ -28,7 +28,7 @@ function Portfolio() {
           <button
             key={tag}
             className={`filter-tag ${activeFilter === tag ? 'active' : ''}`}
-            onClick={() => setActiveFilter(tag)}
+            onClick={() => setActiveFilter(activeFilter === tag ? 'All' : tag)}
           >
             {tag}
           </button>

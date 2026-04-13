@@ -22,15 +22,15 @@ function ClientList() {
 function About() {
   return (
     <section className="section">
-      <h2>About</h2>
+      <h2 className="fade-in" style={{ animationDelay: '0s' }}>About</h2>
       <div className="about-content">
-        <p>
+        <p className="fade-in" style={{ animationDelay: '0.1s' }}>
           I am a multidisciplinary designer and 3D artist specializing in
           in-house brand cultivation. In addition to graphic design, I have a
           robust background in video production and photography, giving me a
           skilled eye for composition, balance, and story.
         </p>
-        <p>
+        <p className="fade-in" style={{ animationDelay: '0.2s' }}>
           My experience working with different mediums allows me to coordinate
           branding efforts across the entire content spectrum, generating
           cohesive and impactful campaigns. I have worked for and collaborated
@@ -38,13 +38,15 @@ function About() {
           Robotics, TIME, National Geographic, Active911, Oregon State
           University, and Daxbot.
         </p>
-        <p>
+        <p className="fade-in" style={{ animationDelay: '0.3s' }}>
           Outside work, I enjoy running, exploring the PNW, and chipping away at
           a Cosmere novel.
         </p>
         <br></br>
-        <h2>Clients + Collaborators</h2>
-        <ClientList />
+        <h2 className="fade-in" style={{ animationDelay: '0.4s' }}>Clients + Collaborators</h2>
+        <div className="fade-in" style={{ animationDelay: '0.5s' }}>
+          <ClientList />
+        </div>
       </div>
     </section>
   );

@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route, NavLink } from 'react-router-dom'
+import { useRef, useEffect } from 'react'
 import './App.css'
 import resumeData from './data/resume.json'
 import Resume from './components/Resume'
@@ -8,11 +9,19 @@ import About from './components/About'
 
 function App() {
   const { name, bio, contact } = resumeData
+  const isFirstLoad = useRef(!sessionStorage.getItem('hasLoaded'))
+
+  useEffect(() => {
+    sessionStorage.setItem('hasLoaded', 'true')
+  }, [])
+
+  const intro = isFirstLoad.current
+  const d = (i) => intro ? { style: { animationDelay: `${i * 0.1}s` } } : {}
 
   return (
     <BrowserRouter>
       <div className="portfolio">
-        <nav className="navbar">
+        <nav className={`navbar${intro ? ' fade-in' : ''}`} {...d(0)}>
           <div className="navbar-content">
             <ul className="nav-links">
               <li><NavLink to="/">Resume</NavLink></li>
@@ -23,9 +32,9 @@ function App() {
         </nav>
 
         <aside className="sidebar">
-          <h1>{name}</h1>
-          <p className="bio">{bio}</p>
-          <div className="contact">
+          <h1 className={intro ? 'fade-in' : ''} {...d(1)}>{name}</h1>
+          <p className={`bio${intro ? ' fade-in' : ''}`} {...d(2)}>{bio}</p>
+          <div className={`contact${intro ? ' fade-in' : ''}`} {...d(3)}>
             <h3>Contact</h3>
             <ul>
               <li><a href={`mailto:${contact.email}`}>{contact.email}</a></li>
