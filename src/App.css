@@ -272,6 +272,10 @@
   }
 }
 
+.fade-in {
+  animation: fadeInDown 0.3s ease-out both;
+}
+
 .project-card {
   background-color: transparent;
   border: 1px solid var(--border-color);
