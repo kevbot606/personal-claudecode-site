@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { loadCaseStudies } from '../data/caseStudyLoader'
 
@@ -6,6 +7,30 @@ const projects = loadCaseStudies()
 function CaseStudy() {
   const { slug } = useParams()
   const project = projects.find(p => p.slug === slug)
+  const [lightboxIndex, setLightboxIndex] = useState(null)
+
+  const images = project?.caseStudy?.images || []
+
+  useEffect(() => {
+    if (lightboxIndex === null) return
+    const handleKey = (e) => {
+      if (e.key === 'Escape') setLightboxIndex(null)
+      if (e.key === 'ArrowLeft') setLightboxIndex(i => (i - 1 + images.length) % images.length)
+      if (e.key === 'ArrowRight') setLightboxIndex(i => (i + 1) % images.length)
+    }
+    window.addEventListener('keydown', handleKey)
+    return () => window.removeEventListener('keydown', handleKey)
+  }, [lightboxIndex, images.length])
+
+  // Lock body scroll when lightbox is open
+  useEffect(() => {
+    if (lightboxIndex !== null) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = ''
+    }
+    return () => { document.body.style.overflow = '' }
+  }, [lightboxIndex])
 
   if (!project) {
     return (
@@ -18,9 +43,37 @@ function CaseStudy() {
   }
 
   const { title, tags, caseStudy } = project
+  const stripImages = images.slice(0, 4)
+
+  const closeLightbox = () => setLightboxIndex(null)
+  const goPrev = (e) => {
+    e.stopPropagation()
+    setLightboxIndex(i => (i - 1 + images.length) % images.length)
+  }
+  const goNext = (e) => {
+    e.stopPropagation()
+    setLightboxIndex(i => (i + 1) % images.length)
+  }
 
   return (
     <div className="case-study">
+
+      {/* Image strip — above title */}
+      {stripImages.length > 0 && (
+        <div className="case-study-image-strip">
+          {stripImages.map((image, index) => (
+            <button
+              key={index}
+              className="image-strip-item"
+              onClick={() => setLightboxIndex(index)}
+              aria-label={`View image: ${image.caption}`}
+            >
+              <img src={image.src} alt={image.caption} />
+            </button>
+          ))}
+        </div>
+      )}
+
       <Link to="/portfolio" className="back-link">Back to Portfolio</Link>
 
       <header className="case-study-header">
@@ -89,11 +142,17 @@ function CaseStudy() {
         <p>{caseStudy.solution}</p>
       </section>
 
-      {caseStudy.images && caseStudy.images.length > 0 && (
+      {stripImages.length > 0 && (
         <section className="case-study-images">
-          {caseStudy.images.map((image, index) => (
+          {stripImages.map((image, index) => (
             <figure key={index} className="case-study-figure">
-              <img src={image.src} alt={image.caption} />
+              <button
+                className="case-study-figure-btn"
+                onClick={() => setLightboxIndex(index)}
+                aria-label={`View image: ${image.caption}`}
+              >
+                <img src={image.src} alt={image.caption} />
+              </button>
               <figcaption>{image.caption}</figcaption>
             </figure>
           ))}
@@ -112,6 +171,45 @@ function CaseStudy() {
       <div className="case-study-footer">
         <Link to="/portfolio" className="back-link">Back to Portfolio</Link>
       </div>
+
+      {/* Lightbox */}
+      {lightboxIndex !== null && (
+        <div className="lightbox-overlay" onClick={closeLightbox} role="dialog" aria-modal="true">
+          <button className="lightbox-close" onClick={closeLightbox} aria-label="Close lightbox">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <line x1="2" y1="2" x2="18" y2="18" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+              <line x1="18" y1="2" x2="2" y2="18" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+            </svg>
+          </button>
+
+          {images.length > 1 && (
+            <button className="lightbox-arrow lightbox-arrow-prev" onClick={goPrev} aria-label="Previous image">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <polyline points="13,3 5,10 13,17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </button>
+          )}
+
+          <div className="lightbox-content" onClick={(e) => e.stopPropagation()}>
+            <img
+              src={images[lightboxIndex].src}
+              alt={images[lightboxIndex].caption}
+            />
+            {images[lightboxIndex].caption && (
+              <p className="lightbox-caption">{images[lightboxIndex].caption}</p>
+            )}
+            <p className="lightbox-counter">{lightboxIndex + 1} / {images.length}</p>
+          </div>
+
+          {images.length > 1 && (
+            <button className="lightbox-arrow lightbox-arrow-next" onClick={goNext} aria-label="Next image">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <polyline points="7,3 15,10 7,17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </button>
+          )}
+        </div>
+      )}
     </div>
   )
 }
