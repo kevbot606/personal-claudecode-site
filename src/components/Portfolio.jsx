@@ -35,8 +35,8 @@ function Portfolio() {
         ))}
       </div>
       <div className="portfolio-grid">
-        {filteredProjects.map((project) => (
-          <Link to={`/portfolio/${project.slug}`} className="project-card" key={project.slug}>
+        {filteredProjects.map((project, index) => (
+          <Link to={`/portfolio/${project.slug}`} className="project-card" key={project.slug} style={{ animationDelay: `${index * 0.1}s` }}>
             <div className="project-image">
               <img src={project.image} alt={project.title} />
             </div>
