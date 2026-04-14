@@ -1,11 +1,11 @@
 {
   "title": "Agility Website",
   "description": "Brand design + scaling design systems",
-  "image": "agility-robotics.png",
+  "image": "agility-website-01.png",
   "tags": ["Video", "Production"],
   "order": 2,
   "caseStudy": {
-    "heroImage": "/images/project2-hero.jpg",
+    "heroImage": "agility-website-02.png",
     "overview": "Agility Robotics had outgrown its Squarespace website. As the company scaled, the platform became a bottleneck — limiting custom layouts, interactions, and the design quality needed to compete with the industry's best. I led the visual design of a full site redesign, prototyping in Figma while a marketing strategist built the new site in Webflow in parallel.",
     "role": "Visual / UX Designer",
     "timeline": "A few months (condensed, parallel build)",
@@ -29,19 +29,27 @@
     "solution": "The redesign delivered a new megamenu navigation and expanded footer that simplified wayfinding across Agility's content. The visual design elevated the site's quality to be competitive with industry leaders, while preserving the brand's clean, open aesthetic. Built in Webflow, the new framework is extensible in ways Squarespace never could have been — giving the team a foundation to continue building on. I collaborated with the Product Marketing Manager on customer profiles and incorporated feedback from the Chief Business Officer throughout.",
     "images": [
       {
-        "src": "agility-site-01.png",
-        "caption": "Megamenu navigation redesign"
-      },
-      {
-        "src": "agility-site-02.png",
+        "src": "agility-website-03.png",
         "caption": "Site layout and visual system"
       },
       {
-        "src": "agility-site-03.png",
+        "src": "agility-website-04.png",
         "caption": "Site layout and visual system"
       },
       {
-        "src": "agility-site-04.png",
+        "src": "agility-website-05.png",
+        "caption": "Site layout and visual system"
+      },
+      {
+        "src": "agility-website-06.png",
+        "caption": "Site layout and visual system"
+      },
+      {
+        "src": "agility-website-07.png",
+        "caption": "Site layout and visual system"
+      },
+      {
+        "src": "agility-website-08.png",
         "caption": "Site layout and visual system"
       }
     ],

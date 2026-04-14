@@ -1,11 +1,11 @@
 {
   "title": "Carnegie Mellon Web App",
   "description": "Brief description for the portfolio grid card.",
-  "image": "thumbnail.jpg",
+  "image": "cmu-app-01.png",
   "tags": ["Design", "Strategy"],
   "order": 5,
   "caseStudy": {
-    "heroImage": "hero.jpg",
+    "heroImage": "cmu-app-01.png",
     "overview": "",
     "role": "",
     "timeline": "",
@@ -18,7 +18,28 @@
       "insights": []
     },
     "solution": "",
-    "images": [],
+    "images": [
+      {
+        "src": "cmu-app-02.png",
+        "caption": "Ad campaign creation interface"
+      },
+      {
+        "src": "cmu-app-03.png",
+        "caption": "Objectives and learning outcomes page"
+      },
+      {
+        "src": "cmu-app-04.png",
+        "caption": "UI primitives — menu states and typography"
+      },
+      {
+        "src": "cmu-app-05.png",
+        "caption": "Button component system"
+      },
+      {
+        "src": "cmu-app-06.png",
+        "caption": "Card component system"
+      }
+    ],
     "results": []
   }
 }

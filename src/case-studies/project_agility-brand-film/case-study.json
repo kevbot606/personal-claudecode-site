@@ -1,11 +1,11 @@
 {
   "title": "Hero Brand Film",
   "description": "Brand + visual design support",
-  "image": "thumbnail.jpg",
+  "image": "agility-brand-film-03.png",
   "tags": ["Video"],
   "order": 4,
   "caseStudy": {
-    "heroImage": "hero.jpg",
+    "heroImage": "agility-brand-film-03.png",
     "overview": "Agility Robotics' Hero Brand Film was the company's first brand film produced at this scale — a cinematic reintroduction of Agility to the world. More than a product showcase, it was a holistic statement of company vision: who Agility is, what they're building, and why it matters. The film also served as the proving ground for a top-to-bottom refreshed visual identity and newly established art direction guidelines.",
     "role": "Visual Design Support / On-Screen Graphics",
     "timeline": "1–2 months",
@@ -29,12 +29,16 @@
     "solution": "The final film debuted Agility's refreshed visual identity at scale, with on-screen graphics and brand treatments that established a new visual standard for the company. The art direction and design decisions made during production became the foundation for Agility's broader art direction guidelines going forward. The film was used across external marketing channels and shared with investors and partners as a definitive statement of where Agility is headed.",
     "images": [
       {
-        "src": "detail-1.jpg",
-        "caption": "On-screen graphics and brand typography"
+        "src": "agility-brand-film-01.png",
+        "caption": "Reviewing Digit design and animation direction"
       },
       {
-        "src": "detail-2.jpg",
-        "caption": "Visual brand direction applied throughout the film"
+        "src": "agility-brand-film-02.png",
+        "caption": "On-screen graphics and visual direction development"
+      },
+      {
+        "src": "agility-brand-film-03.png",
+        "caption": "Final frame with brand typography"
       }
     ],
     "results": [
