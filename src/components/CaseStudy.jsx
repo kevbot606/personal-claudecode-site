@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { loadCaseStudies } from '../data/caseStudyLoader'
 
@@ -8,8 +8,33 @@ function CaseStudy() {
   const { slug } = useParams()
   const project = projects.find(p => p.slug === slug)
   const [lightboxIndex, setLightboxIndex] = useState(null)
+  const [isCollapsed, setIsCollapsed] = useState(false)
+  const sentinelRef = useRef(null)
 
   const images = project?.caseStudy?.images || []
+
+  // Scroll to top whenever entering a case study
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [slug])
+
+  // Observe a sentinel element at the top of the case study.
+  // When it scrolls out of view → collapse the sticky header.
+  // When it comes back into view (user scrolled to top) → expand.
+  useEffect(() => {
+    const sentinel = sentinelRef.current
+    if (!sentinel) return
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsCollapsed(!entry.isIntersecting)
+      },
+      { threshold: 0 }
+    )
+
+    observer.observe(sentinel)
+    return () => observer.disconnect()
+  }, [slug])
 
   useEffect(() => {
     if (lightboxIndex === null) return
@@ -22,7 +47,6 @@ function CaseStudy() {
     return () => window.removeEventListener('keydown', handleKey)
   }, [lightboxIndex, images.length])
 
-  // Lock body scroll when lightbox is open
   useEffect(() => {
     if (lightboxIndex !== null) {
       document.body.style.overflow = 'hidden'
@@ -37,7 +61,7 @@ function CaseStudy() {
       <section className="section">
         <h2>Project Not Found</h2>
         <p>The project you're looking for doesn't exist.</p>
-        <Link to="/portfolio" className="back-link">Back to Portfolio</Link>
+        <Link to="/portfolio" className="back-link">Back</Link>
       </section>
     )
   }
@@ -57,34 +81,42 @@ function CaseStudy() {
 
   return (
     <div className="case-study">
+      {/* Invisible sentinel — when this scrolls out of view, collapse the header */}
+      <div ref={sentinelRef} className="case-study-sentinel" />
 
-      {/* Image strip — above title */}
-      {stripImages.length > 0 && (
-        <div className="case-study-image-strip">
-          {stripImages.map((image, index) => (
-            <button
-              key={index}
-              className="image-strip-item"
-              onClick={() => setLightboxIndex(index)}
-              aria-label={`View image: ${image.caption}`}
-            >
-              <img src={image.src} alt={image.caption} />
-            </button>
-          ))}
-        </div>
-      )}
+      {/* Sticky header region */}
+      <div className={`case-study-sticky-header${isCollapsed ? ' collapsed' : ''}`}>
+        {stripImages.length > 0 && (
+          <div className="case-study-image-strip">
+            {stripImages.map((image, index) => (
+              <button
+                key={index}
+                className="image-strip-item"
+                onClick={() => setLightboxIndex(index)}
+                aria-label={`View image: ${image.caption}`}
+              >
+                <img src={image.src} alt={image.caption} />
+              </button>
+            ))}
+          </div>
+        )}
 
-      <Link to="/portfolio" className="back-link">Back to Portfolio</Link>
+        <Link to="/portfolio" className="back-link">Back</Link>
 
-      <header className="case-study-header">
         <div className="case-study-tags">
           {tags.map((tag, index) => (
             <span className="tag" key={index}>{tag}</span>
           ))}
         </div>
+
         <h1 className="case-study-title">{title}</h1>
-        <p className="case-study-overview">{caseStudy.overview}</p>
-      </header>
+
+        <div className="case-study-overview-wrapper">
+          <p className="case-study-overview">{caseStudy.overview}</p>
+        </div>
+
+        <div className="case-study-sticky-divider" />
+      </div>
 
       <div className="case-study-meta">
         <div className="meta-item">
@@ -169,7 +201,7 @@ function CaseStudy() {
       </section>
 
       <div className="case-study-footer">
-        <Link to="/portfolio" className="back-link">Back to Portfolio</Link>
+        <Link to="/portfolio" className="back-link">Back</Link>
       </div>
 
       {/* Lightbox */}
