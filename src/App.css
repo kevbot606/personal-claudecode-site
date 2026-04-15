@@ -408,6 +408,24 @@
   margin-top: 12px;
 }
 
+/* Subtle gradient fade below sticky header — overlays scrolling content */
+.case-study-sticky-header::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -40px;
+  height: 40px;
+  background: linear-gradient(to bottom, rgba(10, 10, 10, 0.75), transparent);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+}
+
+.case-study-sticky-header.collapsed::after {
+  opacity: 1;
+}
+
 /* Image strip collapse */
 .case-study-sticky-header .case-study-image-strip {
   overflow: hidden;
@@ -443,6 +461,11 @@
 .back-link:hover {
   color: var(--text-primary);
   text-decoration: none;
+}
+
+.back-arrow {
+  vertical-align: -2px;
+  margin-right: 6px;
 }
 
 /* Tags */

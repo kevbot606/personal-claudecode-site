@@ -2,6 +2,7 @@
   "title": "Robot Livery",
   "description": "Brief description of the project and your role.",
   "image": "robot-livery-01.png",
+  "visible": true,
   "tags": ["Content", "Strategy"],
   "order": 3,
   "caseStudy": {

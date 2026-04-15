@@ -61,7 +61,7 @@ function CaseStudy() {
       <section className="section">
         <h2>Project Not Found</h2>
         <p>The project you're looking for doesn't exist.</p>
-        <Link to="/portfolio" className="back-link">Back</Link>
+        <Link to="/portfolio" className="back-link"><svg className="back-arrow" width="14" height="14" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg"><polyline points="244,400 100,256 244,112" stroke="currentColor" strokeWidth="48" strokeLinecap="square" strokeLinejoin="miter"/><line x1="120" y1="256" x2="412" y2="256" stroke="currentColor" strokeWidth="48" strokeLinecap="square"/></svg>Back</Link>
       </section>
     )
   }
@@ -101,7 +101,7 @@ function CaseStudy() {
           </div>
         )}
 
-        <Link to="/portfolio" className="back-link">Back</Link>
+        <Link to="/portfolio" className="back-link"><svg className="back-arrow" width="14" height="14" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg"><polyline points="244,400 100,256 244,112" stroke="currentColor" strokeWidth="48" strokeLinecap="square" strokeLinejoin="miter"/><line x1="120" y1="256" x2="412" y2="256" stroke="currentColor" strokeWidth="48" strokeLinecap="square"/></svg>Back</Link>
 
         <div className="case-study-tags">
           {tags.map((tag, index) => (
@@ -201,7 +201,7 @@ function CaseStudy() {
       </section>
 
       <div className="case-study-footer">
-        <Link to="/portfolio" className="back-link">Back</Link>
+        <Link to="/portfolio" className="back-link"><svg className="back-arrow" width="14" height="14" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg"><polyline points="244,400 100,256 244,112" stroke="currentColor" strokeWidth="48" strokeLinecap="square" strokeLinejoin="miter"/><line x1="120" y1="256" x2="412" y2="256" stroke="currentColor" strokeWidth="48" strokeLinecap="square"/></svg>Back</Link>
       </div>
 
       {/* Lightbox */}

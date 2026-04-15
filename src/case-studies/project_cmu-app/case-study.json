@@ -2,6 +2,7 @@
   "title": "Carnegie Mellon Web App",
   "description": "Brief description for the portfolio grid card.",
   "image": "cmu-app-01.png",
+  "visible": true,
   "tags": ["Design", "Strategy"],
   "order": 5,
   "caseStudy": {

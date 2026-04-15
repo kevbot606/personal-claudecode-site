@@ -2,6 +2,7 @@
   "title": "Tradeshow Booth",
   "description": "Brand + experience design",
   "image": "tradeshow-booth-02.png",
+  "visible": true,
   "tags": ["Design", "Branding"],
   "order": 1,
   "caseStudy": {

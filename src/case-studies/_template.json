@@ -2,6 +2,7 @@
   "title": "Project Title",
   "description": "Brief description for the portfolio grid card.",
   "image": "thumbnail.jpg",
+  "visible": true,
   "tags": ["Tag1", "Tag2"],
   "order": 1,
   "caseStudy": {

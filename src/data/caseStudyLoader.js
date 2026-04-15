@@ -40,10 +40,10 @@ function resolveImages(slug, data) {
 export function loadCaseStudies() {
   return Object.entries(caseStudyModules)
     .map(([path, module]) => {
-      // path looks like "../case-studies/project-one/case-study.json"
       const slug = path.split('/').at(-2)
       const data = module.default || module
       return { slug, ...resolveImages(slug, data) }
     })
+    .filter(project => project.visible !== false)
     .sort((a, b) => (a.order ?? 999) - (b.order ?? 999))
 }
