@@ -394,6 +394,8 @@
   z-index: 10;
   background-color: var(--bg-primary);
   padding-bottom: 0;
+  /* Cover any sub-pixel gap between navbar and sticky header */
+  box-shadow: 0 -8px 0 var(--bg-primary);
 }
 
 /* Divider at the bottom of the sticky header */
@@ -855,7 +857,7 @@
 
   .lightbox-arrow-prev { left: 14px; }
   .lightbox-arrow-next { right: 14px; }
-}
+
   .sidebar {
     width: 30%;
     min-width: 30%;
@@ -910,25 +912,41 @@
 
   .sidebar {
     width: 100%;
+    max-width: 100%;
+    min-width: 0;
     height: auto;
     position: relative;
     top: 0;
     border-right: none;
     border-bottom: 1px solid var(--border-color);
-    padding: 30px 20px;
+    padding: 24px 20px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .sidebar h1 {
+    font-size: 20px;
+    margin-bottom: 12px;
   }
 
   .sidebar .bio {
-    margin-bottom: 24px;
+    display: block;
+    margin-bottom: 0;
+    font-size: 14px;
   }
 
   .sidebar .contact {
-    margin-top: 0;
+    display: none;
   }
 
   .main-content {
     width: 100%;
+    max-width: 100%;
     padding: 30px 20px;
+  }
+
+  .case-study-sticky-header {
+    top: 60px;
   }
 
   .section {
